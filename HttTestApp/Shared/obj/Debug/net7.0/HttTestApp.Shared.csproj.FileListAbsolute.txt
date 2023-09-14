@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\bin\Debug\net7.0\HttTestApp.Shared.deps.json
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\bin\Debug\net7.0\HttTestApp.Shared.dll
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\bin\Debug\net7.0\HttTestApp.Shared.pdb
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\HttTestApp.Shared.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\HttTestApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\HttTestApp.Shared.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\HttTestApp.Shared.AssemblyInfo.cs
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\HttTestApp.Shared.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\HttTestApp.Shared.dll
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\refint\HttTestApp.Shared.dll
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\HttTestApp.Shared.pdb
+C:\Users\User\source\repos\HttTestApp\HttTestApp\Shared\obj\Debug\net7.0\ref\HttTestApp.Shared.dll
