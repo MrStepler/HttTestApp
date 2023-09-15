@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y4DZdyjCDZz/927AWYOe5t0e2tKo4cB0+y2XB1wppyc=",
+  "Hash": "s/D99BtsNpmXkFocmcvMfMbdPsKCp+3/CpvXczRA274=",
   "Source": "HttTestApp.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -7036,6 +7036,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\service-worker-assets.js.build"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\assets\\bootstrap\\css\\bootstrap.min.css",
+      "SourceId": "HttTestApp.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "assets/bootstrap/css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\assets\\bootstrap\\js\\bootstrap.min.js",
+      "SourceId": "HttTestApp.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "assets/bootstrap/js/bootstrap.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\bootstrap\\js\\bootstrap.min.js"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\css\\app.css",

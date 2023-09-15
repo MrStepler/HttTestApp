@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MhGmjtdC0FRIbq/TyoYIpf1DdzS/quCldlzGhAoG7UA=",
+  "Hash": "JXOWuU2Ftnne230p3vr/DPe3GQSOV+oGO8saYmMRb7g=",
   "Source": "HttTestApp.Server",
   "BasePath": "_content/HttTestApp.Server",
   "Mode": "Default",
@@ -6997,6 +6997,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net7.0\\service-worker-assets.js.build"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\assets\\bootstrap\\css\\bootstrap.min.css",
+      "SourceId": "HttTestApp.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "assets/bootstrap/css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\assets\\bootstrap\\js\\bootstrap.min.js",
+      "SourceId": "HttTestApp.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "assets/bootstrap/js/bootstrap.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\bootstrap\\js\\bootstrap.min.js"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\HttTestApp\\HttTestApp\\Client\\wwwroot\\css\\app.css",

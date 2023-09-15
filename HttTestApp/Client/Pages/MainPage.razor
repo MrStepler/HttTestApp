@@ -1,7 +1,196 @@
-﻿@page "/"
+﻿@layout MainLayout
+@page "/"
 
-<PageTitle>Index</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="row" style="display: flex;margin-top: 5px;justify-content: space-around;align-items: center;">
+    <button class="btn btn-primary" type="button" style="display: block;padding: 0;width: 100px;" @onclick="ShowProductWithCategories">Товары и Категории</button>
+    <button class="btn btn-primary" type="button" style="display: block;padding: 0;width: 100px;" @onclick="ShowCategories">Категории</button>
+    <button class="btn btn-primary" type="button" style="display: block;padding: 0;width: 100px;" @onclick="ShowProducts">Товары</button>
+    <button class="btn btn-primary" type="button" style="display: block;padding: 0;width: 100px;" @onclick="ShowFilters">Фильтр</button></div>
+    @if(filterIsVisible){
+    <div class="row" style="display: flex;margin-top: 5px;justify-content: center;align-items: center;gap: 70%;margin: 10px;">
+        <div style="width: 100px;"><label class="form-label">Стоимость</label>
+            <input type="number" style="width: 100px;" @bind-value=filtercost></div>
+        <div style="width: 100px;">
+            <label class="form-label">Фильтр стоимости</label>
+            <select @bind="StringSelector" >
+                <option value="True" selected="">Больше заданной цены</option>
+                <option value="False">Меньше заданной цены</option>
+            </select>
+        </div>
+        <div class="text-center"><button class="btn btn-primary" type="button" @onclick="ShowFilteredProducts">Поиск</button></div>
+    </div>
+    }
+<div style="padding: 20px;">
+    <div class="table-responsive">
+        <table class="table" style="padding: 20px;">
+            @switch (currentTable)
+            {
+                case Navigation.Category:
+                {
+                        <thead>
+                            <tr>
+                                <th>Категории</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var category in Categories)
+                            {
+                                <tr>
+                                    <td>@category</td>
+                                </tr>
+                            }
 
-Welcome to your new app.
+                        </tbody>
+                        break;
+                    }
+                case Navigation.ProductCategory:
+                {
+                        <thead>
+                            <tr>
+                                <th>Артикул</th>
+                                <th>Наименование</th>
+                                <th>Описание</th>
+                                <th>Цена</th>
+                                <th>Остаток</th>
+                                <th>Категории</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var product in ProductsWithCategories)
+                            {
+                                <tr>
+                                    <td>@product.Article</td>
+                                    <td>@product.ProductName</td>
+                                    <td>@product.Description</td>
+                                    <td>@product.Cost</td>
+                                    <td>@product.Count</td>
+                                    <td>
+                                        <div class="row" style="display:block">
+                                            @foreach (var category in product.Categories)
+                                            {
+
+                                                <div class="col-1">
+                                                    <label class="form-label">@category</label>
+                                                </div>
+                                                
+                                            }
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                        break;
+                }
+                case Navigation.Product:
+                    {
+                        <thead>
+                            <tr>
+                                <th>Артикул</th>
+                                <th>Наименование</th>
+                                <th>Описание</th>
+                                <th>Цена</th>
+                                <th>Остаток</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var product in Products)
+                            {
+                                <tr>
+                                    <td>@product.Article</td>
+                                    <td>@product.ProductName</td>
+                                    <td>@product.Description</td>
+                                    <td>@product.Cost</td>
+                                    <td>@product.Count</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                        break;
+                    }
+                
+            }
+            
+        </table>
+    </div>
+</div>
+
+@code{
+    bool filterIsVisible = false;
+    float filtercost = 0;
+    bool moreCost
+    {
+        get => StringSelector == "True";
+        set => StringSelector = value.ToString();
+    }
+    string StringSelector { get;set;}
+    protected override async Task OnInitializedAsync()
+    {
+        currentTable = Navigation.ProductCategory;
+        var response = await Http.GetAsync($"/products/categories");
+
+        if (response.StatusCode == HttpStatusCode.OK)
+        {
+            ProductsWithCategories = await Http.GetFromJsonAsync<List<ProductsDTO>>($"/products/categories");
+        }
+    }
+    private enum Navigation
+    {
+        Category,
+        Product,
+        ProductCategory
+    }
+    List<ProductsDTO>? ProductsWithCategories = new List<ProductsDTO>();
+    List<Product>? Products = new List<Product>();
+    List<string>? Categories = new List<string>();
+    Navigation? currentTable = Navigation.ProductCategory;
+    public async Task ShowProductWithCategories()
+    {
+        currentTable = Navigation.ProductCategory;
+        var response = await Http.GetAsync($"/products/categories");
+
+        if (response.StatusCode == HttpStatusCode.OK)
+        {
+            ProductsWithCategories = await Http.GetFromJsonAsync<List<ProductsDTO>>($"/products/categories");
+        }
+        filterIsVisible = false;
+    }
+    public async Task ShowCategories()
+    {
+        currentTable = Navigation.Category;
+        var response = await Http.GetAsync($"/categories");
+
+        if (response.StatusCode == HttpStatusCode.OK)
+        {
+            Categories = await Http.GetFromJsonAsync<List<string>>($"/categories");
+        }
+        filterIsVisible = false;
+    }
+    public async Task ShowProducts()
+    {
+        currentTable = Navigation.Product;
+        var response = await Http.GetAsync($"/products?cost=0&more=true");
+
+        if (response.StatusCode == HttpStatusCode.OK)
+        {
+            Products = await Http.GetFromJsonAsync<List<Product>>($"/products?cost=0&more=true");
+        }
+        filterIsVisible = false;
+    }
+    public void ShowFilters()
+    {
+        filterIsVisible = true;
+    }
+    public async Task ShowFilteredProducts()
+    {
+        currentTable = Navigation.Product;
+        var response = await Http.GetAsync($"/products?cost={filtercost}&more={moreCost.ToString()}");
+
+        if (response.StatusCode == HttpStatusCode.OK)
+        {
+            Products = await Http.GetFromJsonAsync<List<Product>>($"/products?cost={filtercost}&more={moreCost.ToString()}");
+        }
+    }
+}
