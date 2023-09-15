@@ -129,6 +129,7 @@
     protected override async Task OnInitializedAsync()
     {
         currentTable = Navigation.ProductCategory;
+        StringSelector = "True";
         var response = await Http.GetAsync($"/products/categories");
 
         if (response.StatusCode == HttpStatusCode.OK)

@@ -69,7 +69,7 @@
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-4I9gN+c4ZlQ7gKy89Zcx1TLhMotcaRda6Wdj7GezRJM=",
+      "hash": "sha256-0h9m1OJOW2pS1pHS4YsvMW77CSgiYL7yplSVZirFhj8=",
       "url": "index.html"
     },
     {
@@ -881,11 +881,11 @@
       "url": "_framework\/HttTestApp.Shared.pdb"
     },
     {
-      "hash": "sha256-7ZFNhjsDPaAFRYyw7btCiC8EMcwdcak6gi2Crj43s+c=",
+      "hash": "sha256-6QG+eRTaeKsB8ooQMBW8DHRR91BnDM5zNQE2bYZ6iFc=",
       "url": "_framework\/HttTestApp.Client.dll"
     },
     {
-      "hash": "sha256-\/RG1kZIZeT5S6\/\/+vcY95P+JFO2PvmDoe++IG5R9WZ4=",
+      "hash": "sha256-Hp3sOQE8OF2IHQyl30D9HXe7FLSYuzyWoJ1QnCvU5I8=",
       "url": "_framework\/HttTestApp.Client.pdb"
     },
     {
@@ -893,9 +893,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-xgzVzrgSRf\/1itt606lte8\/0MRnYXjd\/Uv4IBj4iKp4=",
+      "hash": "sha256-j3OyYkMjnl4ykzeiRY9EdpFUJP0eV8FeoKAqQOy6GrM=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "IFwbnsMg"
+  "version": "ne8EeELd"
 };
